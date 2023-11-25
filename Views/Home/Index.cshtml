@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model AppModel
+
+<div id="index-welcome-container">
+
+    <div style="@(AppModel.isLogin?"display:none":"display:block")">
+    <h1 style="text-align:left">Eventures - The best ticket servive in the world</h1>
+    <h4></h4>
+    <hr style="border: 3px solid black">
+    <h4 style="text-align:left">
+        <a asp-action="GetLoginPage">Login</a> to start " eventing".
+     <!--   <a href="#">Login</a> to start " eventing".-->
+    </h4>
+    <h4 style="text-align:left">
+        <a asp-action="GetRegisterPage">Register</a> if you don't have an account.
+    </h4>
+    </div>
+
+    <div style="@(AppModel.isLogin?"display:block":"display:none")">
+        <h1 style="text-align:center">@(AppModel.type.Equals("Admin") ? "Greetings, Administrator "+ @AppModel.UserName : "Welcome "+ @AppModel.UserName+" !")</h1>
+        <h4></h4>
+        <hr style="border: 3px solid black">
+        <h4 style="text-align:center">@(AppModel.type.Equals("Admin") ? "Enjoy your work." : "Eventures wishes you an exciting experience.")</h4>
+    </div>
+    <hr style="border: 3px solid black">
+    <div>This Project was develop by Stoycho Stankov FN: 23344001</div>
+    <div>Based on the requirements and for testing purposes admin user name is "admin" and password is "admin"</div>
+</div>
