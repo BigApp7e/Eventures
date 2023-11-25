@@ -1,0 +1,60 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+.custome-app-background {
+    background-color: #AFEEEE;
+}
+#index-welcome-container {
+    position: absolute;
+    left: 50%;
+    margin-left: -40vw;
+
+    margin-top: 4vh;
+    padding: 50px;
+    width: 80vw;
+    background-color: #AFEEEE;
+}
+.center-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 50%;
+}
+.center-register-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.green-button {
+    color:black;
+    background-color: #AFEEEE;
+}
+.nav-bar-buttons {
+    text-decoration:none;
+    color: inherit;
+}
+.bold-style{
+    font-weight:bold;
+}

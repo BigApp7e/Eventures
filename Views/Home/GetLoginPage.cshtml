@@ -1,0 +1,39 @@
+﻿@model UserLogin
+
+<div class="container center-container" style="text-align:center; max-width:500px">
+
+    <form asp-controller="Home" method="get" asp-action="TryToLogin" enctype="multipart/form-data">
+        <h1>Login</h1>
+        @if (TempData["msg"] != null)
+        {
+            <div class="alertMessage">
+                @TempData["msg"];
+            </div>
+        }
+        <hr style="border: 3px solid black">
+        <div class="form-group">
+            <label for="exampleInputEmail1">User Name</label>
+            <input type="text" class="form-control" id="username" placeholder="Enter user name" asp-for="UserName">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" asp-for="Password">
+        </div>
+        <hr style="border: 3px solid black">
+        <div class="form-group form-check" style="max-width:150px; margin:0px auto">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Remember me?</label>
+        </div>
+        <hr style="border: 3px solid black">
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary green-button">Login</button>
+        </div>
+        <div class="form-group">
+        <a href="#">Forgot your password?</a>
+        </div>
+        <div class="form-group">
+            <a asp-action="GetRegisterPage">Register as new User</a>
+        </div>
+    </form>
+</div>
+
